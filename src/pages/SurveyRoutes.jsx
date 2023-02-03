@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const SurveyRoutes = () => {
+
+    const [activeRoute, setActiveRoute] = useState(0)
+
     return (
         <SurveyRoutesContianer>
             <ul>
-                <li className='active'><a href="">Build</a></li>
-                <li><a href="">Settings</a></li>
-                <li><a href="">Publish</a></li>
+                <li
+                    className={activeRoute === 1 ? "active" : ""}
+                    onClick={() => { setActiveRoute(1) }}
+                >
+                    <Link to="/createForm/build"
+                    >
+                        Build
+                    </Link>
+                </li>
+
+                <li
+                    className={activeRoute === 2 ? "active" : ""}
+                    onClick={() => { setActiveRoute(2) }}
+                >
+                    <Link
+                        to='/createForm/settings'>Settings</Link></li>
+
+                <li
+                    className={activeRoute === 3 ? "active" : ""}
+                    onClick={() => { setActiveRoute(3) }}
+                ><Link to='/createForm/publish'>Publish</Link></li>
             </ul>
         </SurveyRoutesContianer>
     )
@@ -19,7 +41,9 @@ export default SurveyRoutes
 const SurveyRoutesContianer = styled.div`
     width: 100%;
     height: 6vh;
-    background : #2487CE;
+    /* background : #2487CE; */
+    border: 1px solid gray;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 
     ul{
         width: 100%;
@@ -54,7 +78,7 @@ const SurveyRoutesContianer = styled.div`
     }
 
     a{
-        color: white;
+        color: black;
         text-decoration: none;
         font-size: 1.2rem;
         @media (max-width: 940px) {
@@ -63,11 +87,19 @@ const SurveyRoutesContianer = styled.div`
     }
 
     .active{
-        background-color: #234a7e;
+        background : #2487CE;
+        a{
+            
+            color: white;
+        }
     }
     
     li:hover{
-        background-color: #234a7e;
+        background : #2487CE;
+        a{
+            
+            color: white;
+        }
     }
 
 `

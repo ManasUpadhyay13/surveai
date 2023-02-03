@@ -29,23 +29,7 @@ const Container = styled.div`
     font-size: 2rem;
 }
 
-.navbar-search {
-    width: 20%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
 
-.navbar-search input {
-    background-color: #f3f3fe;
-    border: none;
-    outline: none;
-    height: 60%;
-    padding: 20px;
-    border-radius: 10px;
-}
 
 .survey-header-button {
     width: 100%;
