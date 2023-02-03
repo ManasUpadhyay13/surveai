@@ -207,21 +207,22 @@ const CreateFrom_buid = () => {
                           <input type="text" className="survey-box-scale-question" placeholder='Type your question' value={item.question} readOnly />
 
                           <div className="slider">
-                            <input type="text" placeholder='Start value' value={item.start} readOnly />
+                           
 
                             <Slider
-                              style={{ width: "250px" }}
+                            
+                              style={{  }}
                               aria-label="Temperature"
                               defaultValue={Number((item.start + item.end) / 2)}
                               valueLabelDisplay="auto"
                               step={Number(item.steps)}
-                              marks
+                              
                               min={Number(item.start)}
                               max={Number(item.end)}
-                              disabled
+                              
                             />
 
-                            <input type="text" placeholder='End value' readOnly value={item.end} />
+                           
                           </div>
                         </div>
 
@@ -250,6 +251,17 @@ const CreateFrom_buid = () => {
                         </div>
 
                         <div className="survey-box-options">
+                        <SwitchContainer 
+                            onClick={()=>{
+                                console.log("clicked");
+                            }}
+                            >
+                                <label className="switch">
+                                    <input type="checkbox" 
+                                    />
+                                    <div className="slider"></div>
+                                </label>
+                            </SwitchContainer>
                           <i className='bx bx-trash' onClick={() => { handleSurveyDelete(index) }}></i>
                           <i className='bx bx-edit-alt' onClick={() => { handleSurveyEdit(index) }}  ></i>
 
@@ -276,6 +288,7 @@ export default CreateFrom_buid
 
 
 const BuildContainer = styled.div`
+font-family: 'Lexend', sans-serif;
   height: 100%;
   min-height: 84vh;
   /* background-color: #ececfc; */
@@ -368,9 +381,10 @@ const SurveyContainer = styled.div`
   margin-bottom : 10px;
 
   .survey-name{
+    
     width: 90%;
     height: 30vh;
-    background-color: white;
+    background-image: url("https://images.ctfassets.net/co0pvta7hzrh/3TwdBCGKnkxHhd5CZLvLps/35fc2735d8751771618fcfc03b27c209/sponsorship_satisfaction_survey_Thumbnail.png");
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -378,6 +392,7 @@ const SurveyContainer = styled.div`
     margin-top: 2rem;
     flex-direction: column;
     gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   }
 
   .survey-box-container{
@@ -452,7 +467,7 @@ const SurveyContainer = styled.div`
       }
 
       .mcq-input{
-        border-bottom : 1px solid gray;
+       font-weight:bold;
       }
 
       .mcq-options{
@@ -507,13 +522,14 @@ const SurveyContainer = styled.div`
       align-items: center;
       justify-content: space-between;
       flex-direction: column;
+      
 
       input{
         width: 90%;
         height: 50px;
         border: none;
         outline: none;
-        border-bottom: 1px solid black;
+       
         padding : 10px;
         margin: 20px;
 
@@ -523,11 +539,13 @@ const SurveyContainer = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 100%;
+        width: 90%;
 
         input{
-          width: 10%;
-          border: 1px solid gray;
+          width: 20px;
+          height:40px;
+          font-size:8px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
         }
       }
     }

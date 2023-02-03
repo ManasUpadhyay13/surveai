@@ -96,6 +96,8 @@ export default AdminPannel
 
 
 const AdminPannelContainer = styled.div`
+
+font-family: 'Lexend', sans-serif;
     height: 90vh;
     width: 100%;
     background-color: #F3F4F7;
@@ -117,17 +119,27 @@ const AdminPannelContainer = styled.div`
             img{
                 width: 250px;
             }
-
             button{
-                width: 15%;
-                height: 7%;
-                outline: none;
-                border: none;
-                background-color: #59A0D3;
+                background-color: #2487ce;
                 color: white;
-                font-size: 1rem;
-                border-radius: 10px;
-                cursor: pointer;
+                border:none;
+                font-size: 12px;
+                padding: 5px 20px;
+                border-radius: 5px;
+                margin: 0px 0px;
+                cursor: pointer;  
+                font-family: 'Lexend', sans-serif;
+            }
+            button:hover{
+               
+                background-color: #0d6efd;
+                color: white;
+                border:none;
+                font-size: 12px;
+                padding: 5px 20px;
+                border-radius: 5px;
+               
+                cursor: pointer;  
             }
         }
 
@@ -150,18 +162,26 @@ const AdminPannelContainer = styled.div`
 
 
                 button{
-                    width: 86%;
-                    height: 8%;
-                    outline: none;
-                    border: none;
-                    background-color:  #59A0D3;
-                    font-size: 1rem;
+                    background-color: #2487ce;
                     color: white;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    border-radius: 10px;
-                    cursor: pointer;
+                    border:none;
+                    font-size: 12px;
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                    margin: 0px 0px;
+                    cursor: pointer;  
+                    font-family: 'Lexend', sans-serif;
+                }
+                button:hover{
+                   
+                    background-color: #0d6efd;
+                    color: white;
+                    border:none;
+                    font-size: 12px;
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                   
+                    cursor: pointer;  
                 }
             }
 
